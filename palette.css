@@ -172,3 +172,19 @@ footer{background:var(--footer)}
 }
 @media(min-width:801px){main>.hero-shell .hero{align-items:center;padding-bottom:0}.hero-shell .hero-art{align-self:end}}
 @media(max-width:800px){.hero-shell .hero-art{padding-bottom:0}.hero-shell .sidiane-portrait{width:min(100%,340px)}.hero-shell .sidiane-portrait img{max-height:415px}.hero-shell .hero-art .shape-back{inset:5% 3% 0}}
+
+/* Modalidades de agendamento: lista editorial, sem cards redundantes. */
+#clinica .clinic-layout{align-items:start}
+#clinica .clinic-contact-options{display:grid;gap:0;scroll-margin-top:100px}
+#clinica .clinic-contact-options>h3{font-size:21px;margin-bottom:4px}
+#clinica .contact-option{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
+#clinica .contact-option .clinic-icon{width:42px;height:42px;border-radius:12px}
+#clinica .contact-option:nth-of-type(2) .clinic-icon{background:var(--stage-two);color:#725722}
+#clinica .contact-option:nth-of-type(3) .clinic-icon{background:var(--stage-three);color:#854554}
+#clinica .contact-option h4{margin:0 0 4px;color:var(--ink);font-size:17px;line-height:1.3}
+#clinica .contact-option-link{display:inline-flex;align-items:center;gap:7px;min-height:44px;font-size:14px;font-weight:700;color:var(--green);text-decoration:none}
+#clinica .contact-option-link:hover{text-decoration:underline}
+#clinica .contact-option-link svg{width:17px;height:17px}
+#clinica .clinic-actions{padding-left:0}
+#clinica .clinic-map{height:clamp(350px,38vw,490px)}
+@media(max-width:800px){#clinica .clinic-map{height:290px}}
