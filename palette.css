@@ -143,3 +143,12 @@ footer{background:var(--footer)}
 #clinica .clinic-map iframe{display:block;width:100%;height:100%;border:0}
 @media(max-width:800px){#clinica .clinic-layout{grid-template-columns:minmax(0,1fr);gap:24px}#clinica .clinic-map{height:290px}#clinica .clinic-actions{padding-left:0;justify-content:flex-start}}
 @media(max-width:480px){#clinica .clinic-location,#clinica .clinic-contact{grid-template-columns:40px minmax(0,1fr);gap:12px}#clinica .clinic-icon{width:40px;height:40px}#clinica .clinic-actions{flex-direction:column;align-items:stretch;gap:6px}#clinica .clinic-actions .btn,#clinica .clinic-actions .unit-route{justify-content:center;text-align:center}#clinica .clinic-map{height:250px}}
+
+/* Fotografias reais: retrato recortado na hero e ambiente na apresentação. */
+.hero-shell .hero-art{min-height:0;padding-bottom:30px}
+.hero-shell .sidiane-portrait{width:min(100%,430px);position:relative;z-index:1}
+.hero-shell .sidiane-portrait img{display:block;width:100%;height:auto;max-height:560px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 12px 14px #176b6518)}
+.hero-shell .portrait-label{display:none}
+.sidiane-about>img{display:block;width:100%;height:clamp(300px,35vw,450px);object-fit:cover;object-position:center 45%;background:var(--sage)}
+.professional-registration{font-size:14px!important;font-weight:600;letter-spacing:.02em;color:var(--green)!important;margin:0 0 16px}
+@media(max-width:800px){.hero-shell .hero-art{padding-bottom:16px}.hero-shell .sidiane-portrait{width:min(100%,320px)}.hero-shell .sidiane-portrait img{max-height:415px}.sidiane-about>img{height:clamp(280px,75vw,400px)}}
