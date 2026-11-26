@@ -152,3 +152,23 @@ footer{background:var(--footer)}
 .sidiane-about>img{display:block;width:100%;height:clamp(300px,35vw,450px);object-fit:cover;object-position:center 45%;background:var(--sage)}
 .professional-registration{font-size:14px!important;font-weight:600;letter-spacing:.02em;color:var(--green)!important;margin:0 0 16px}
 @media(max-width:800px){.hero-shell .hero-art{padding-bottom:16px}.hero-shell .sidiane-portrait{width:min(100%,320px)}.hero-shell .sidiane-portrait img{max-height:415px}.sidiane-about>img{height:clamp(280px,75vw,400px)}}
+
+/* Hero: integra as bordas recortadas do retrato à forma orgânica. */
+.hero-shell .hero-art{padding-bottom:0;isolation:isolate}
+.hero-shell .hero-art .shape-back{inset:5% 3% 0;transform:rotate(-4deg)}
+.hero-shell .sidiane-portrait{width:min(100%,460px);margin:0 auto;align-self:end}
+.hero-shell .sidiane-portrait img{
+ display:block;width:auto;height:auto;max-width:100%;max-height:560px;margin-inline:auto;
+ object-fit:contain;object-position:center bottom;
+ filter:none;
+ -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 87%,transparent 100%);
+ mask-image:linear-gradient(to bottom,#000 0%,#000 87%,transparent 100%);
+}
+@supports (mask-composite:intersect){
+ .hero-shell .sidiane-portrait img{
+  mask-image:linear-gradient(to bottom,#000 0%,#000 87%,transparent 100%),linear-gradient(to right,#000 0%,#000 91%,transparent 100%);
+  mask-composite:intersect;
+ }
+}
+@media(min-width:801px){main>.hero-shell .hero{align-items:center;padding-bottom:0}.hero-shell .hero-art{align-self:end}}
+@media(max-width:800px){.hero-shell .hero-art{padding-bottom:0}.hero-shell .sidiane-portrait{width:min(100%,340px)}.hero-shell .sidiane-portrait img{max-height:415px}.hero-shell .hero-art .shape-back{inset:5% 3% 0}}
