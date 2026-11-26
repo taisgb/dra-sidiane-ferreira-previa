@@ -188,3 +188,6 @@ footer{background:var(--footer)}
 #clinica .clinic-actions{padding-left:0}
 #clinica .clinic-map{height:clamp(350px,38vw,490px)}
 @media(max-width:800px){#clinica .clinic-map{height:290px}}
+
+/* Facebook e Instagram: canais oficiais */
+.brand-facebook{color:#1877f2;flex:none}.social-facebook{display:inline-flex;align-items:center;gap:8px;text-decoration:none}.review-rating .social-facebook{justify-content:center;min-height:44px;font-weight:600;color:var(--green);margin-top:8px}.social-facebook:hover{text-decoration:underline}.review-rating .social-facebook .brand-facebook{width:20px;height:20px}.footer-content .social-facebook .brand-facebook{width:19px;height:19px}
