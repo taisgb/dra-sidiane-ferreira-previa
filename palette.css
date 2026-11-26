@@ -123,3 +123,23 @@ footer{background:var(--footer)}
  .process-grid{grid-template-columns:1fr}
  .floating.floating-whatsapp{bottom:max(14px,env(safe-area-inset-bottom))}
 }
+
+/* Localização: composição editorial, sem card envolvente. */
+#clinica .clinic-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:center;padding-block:clamp(8px,2vw,24px)}
+#clinica .clinic-details{min-width:0;display:flex;flex-direction:column;gap:24px;text-align:left}
+#clinica .clinic-location,#clinica .clinic-contact{display:grid;grid-template-columns:48px minmax(0,1fr);gap:16px;align-items:start}
+#clinica .clinic-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--sage);color:var(--green)}
+#clinica .clinic-icon svg{width:23px;height:23px;stroke-width:1.8}
+#clinica h3{font-size:clamp(21px,2vw,27px);margin:0 0 8px;color:var(--ink);line-height:1.2}
+#clinica .clinic-details p,#clinica address{font-size:15px;line-height:1.65;color:var(--muted);margin:0;font-style:normal}
+#clinica .clinic-contact{border-top:1px solid var(--line);padding-top:24px}
+#clinica .clinic-contact-label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:4px}
+#clinica .clinic-number{display:inline-block;font-size:21px;font-weight:700;color:var(--green);margin-bottom:8px;text-decoration:none}
+#clinica .clinic-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;padding-left:64px}
+#clinica .clinic-actions .btn{width:auto;max-width:100%;background:var(--green);border-radius:999px;padding-inline:22px}
+#clinica .clinic-actions .btn:hover{background:var(--primary-hover)}
+#clinica .clinic-actions .unit-route{display:inline-flex;align-items:center;gap:7px;color:var(--green);min-height:44px}
+#clinica .clinic-map{height:350px;min-width:0;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:var(--sage);box-shadow:0 8px 25px #176b6512}
+#clinica .clinic-map iframe{display:block;width:100%;height:100%;border:0}
+@media(max-width:800px){#clinica .clinic-layout{grid-template-columns:minmax(0,1fr);gap:24px}#clinica .clinic-map{height:290px}#clinica .clinic-actions{padding-left:0;justify-content:flex-start}}
+@media(max-width:480px){#clinica .clinic-location,#clinica .clinic-contact{grid-template-columns:40px minmax(0,1fr);gap:12px}#clinica .clinic-icon{width:40px;height:40px}#clinica .clinic-actions{flex-direction:column;align-items:stretch;gap:6px}#clinica .clinic-actions .btn,#clinica .clinic-actions .unit-route{justify-content:center;text-align:center}#clinica .clinic-map{height:250px}}
